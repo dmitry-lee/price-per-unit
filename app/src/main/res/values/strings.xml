@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Цена за единицу</string>
+    <string name="price_text">Цена</string>
+    <string name="restult_text">Result</string>
+    <string name="calc_text">Посчитать</string>
+    <string name="volume_text">Масса (объем)</string>
+</resources>
