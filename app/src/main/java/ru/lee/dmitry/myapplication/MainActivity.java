@@ -14,7 +14,6 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String RESULT_TAG = "Цена за 1 кг (л)";
     EditText etVol;
     EditText etPrice;
     TextView tvResult;
@@ -64,18 +63,9 @@ public class MainActivity extends AppCompatActivity {
             price = Double.parseDouble(pr);
 
             result = 1000 * price / volume;
-            tvResult.setText(String.format("%s : %.2f руб.", RESULT_TAG, result));
+            String res = getResources().getString(R.string.result_tag);
+            tvResult.setText(String.format("%s : %.2f руб.", res, result));
 
-        }
-    };
-
-    private View.OnClickListener clickListener = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            volume = Double.parseDouble(etVol.getText().toString());
-            price = Double.parseDouble(etPrice.getText().toString());
-            result = 1000 * price / volume;
-            tvResult.setText(String.format("%s %.3f", RESULT_TAG, result));
         }
     };
 
@@ -86,6 +76,7 @@ public class MainActivity extends AppCompatActivity {
                 final Drawable x = getResources().getDrawable(android.R.drawable.ic_menu_close_clear_cancel);
                 if (event.getX() > v.getWidth() - v.getPaddingRight()- x.getIntrinsicWidth()){
                     ((EditText) v).setText("");
+                    tvResult.setText("");
                 }
             }
             return false;
