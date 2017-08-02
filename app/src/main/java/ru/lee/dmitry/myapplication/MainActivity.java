@@ -32,7 +32,18 @@ public class MainActivity extends AppCompatActivity {
         etVol.addTextChangedListener(textWatcher);
         etVol.setOnTouchListener(onTouchListener);
         etPrice.setOnTouchListener(onTouchListener);
+        tvResult.setOnClickListener(clickListener);
     }
+
+    private TextView.OnClickListener clickListener = new TextView.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            tvResult.setText("");
+            etPrice.setText("");
+            etVol.setText("");
+        }
+    };
+
 
     private TextWatcher textWatcher = new TextWatcher() {
         @Override
