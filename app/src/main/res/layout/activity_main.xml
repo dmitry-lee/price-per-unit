@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/colorBackground"
     tools:context="ru.lee.dmitry.myapplication.MainActivity">
 
 
@@ -13,6 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            app:hintTextAppearance="@style/MyHintText"
         >
 
         <EditText
@@ -20,6 +22,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="20dp"
+            android:theme="@style/MyEditText"
+
             android:layout_marginLeft="40dp"
             android:layout_marginStart="40dp"
             android:layout_marginEnd="40dp"
@@ -37,6 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        app:hintTextAppearance="@style/MyHintText"
         >
 
         <EditText
@@ -44,6 +49,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="20dp"
+            android:theme="@style/MyEditText"
             android:layout_marginLeft="40dp"
             android:layout_marginStart="40dp"
             android:layout_marginEnd="40dp"
