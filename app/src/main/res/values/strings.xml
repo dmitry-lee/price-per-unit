@@ -4,4 +4,5 @@
     <string name="restult_text">Result</string>
     <string name="calc_text">Посчитать</string>
     <string name="volume_text">Масса (объем)</string>
+    <string name="result_tag">Цена за 1 кг (л)</string>
 </resources>
